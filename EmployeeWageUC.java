@@ -24,11 +24,11 @@ public class EmployeeWageUC
 		{
 			switch(empCheckAttendance)	
 			{
-				case 1:  int dailyWageOfEmp = wagePerHr*dayHrFulltime*noOfDays;
+				case 1:  int dailyWageOfEmp = wagePerHr*maxHrs*noOfDays;
 						 System.out.println("Daily Employee wage of an Full time Employee is "+dailyWageOfEmp+"");
 						break;
 					
-				case 2: int dailyWageOfEmp1 = wagePerHr*dayHrPartTime*noOfDays;
+				case 2: int dailyWageOfEmp1 = wagePerHr*maxHrs*noOfDays;
 						System.out.println("Daily Employee wage of an Full time Employee is "+dailyWageOfEmp1+"");
 						break;
 					
