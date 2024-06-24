@@ -11,22 +11,21 @@ public class EmployeeWageUC {
 		int dayHrFulltime =8;
 		int dayHrPartTime =4;
 		
-		double empCheckAttendance = Math.floor(Math.random()*10)%3;
-		if(empCheckAttendance==isFullTime)
+		int empCheckAttendance = (int) (Math.floor(Math.random()*10)%3);
+		
+		switch(empCheckAttendance)
 		{
-			int dailyWageOfEmp = wagePerHr*dayHrFulltime;
+			case 1:  int dailyWageOfEmp = wagePerHr*dayHrFulltime;
 			System.out.println("Daily Employee wage of an Full time Employee is "+dailyWageOfEmp+"");
+			break;
+			
+			case 2: int dailyWageOfEmp1 = wagePerHr*dayHrPartTime;
+			System.out.println("Daily Employee wage of an Full time Employee is "+dailyWageOfEmp1+"");
+			break;
+			
+			default : System.out.println("Employee is absent");
 		}
-		else if(empCheckAttendance== isPartTime)
-		{
-			int dailyWageOfEmp = wagePerHr*dayHrPartTime;
-			System.out.println("Daily Employee wage of an part time Employee is "+dailyWageOfEmp+"");
-		}
-		else
-		{
-			System.out.println("Employee is not present");
-		}
-
+		 
 	}
 
 }
